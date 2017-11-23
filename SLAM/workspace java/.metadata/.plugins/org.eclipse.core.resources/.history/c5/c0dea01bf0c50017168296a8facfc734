@@ -1,0 +1,30 @@
+package JDBC;
+
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+import com.mysql.jdbc.*;
+
+public class JDBC {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	public static void insererEnBdd(){
+		String url="";
+		String login="root";
+		String passwd="";
+		Connection cn=null;
+		Statement st=null;
+		
+		try{
+			Class.forName("com.mysql.jdbc.Driver");
+			cn=(Connection) DriverManager.getConnection(url, login, passwd);
+			st=(Statement) cn.createStatement();
+			String sql = "INSERT INTO 'javadb' ('personne') VALUES ('"+ personne + "')";
+		}catch(SQLException e){
+			e.printStackTrace			
+		}
+	}
+}

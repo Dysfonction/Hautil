@@ -11,19 +11,15 @@
   <title>Title</title>
 </head>
 <body>
-<h1>Entrer un commentaire : </h1>
-<form action="/helloWorld" method="post">
+<h1>Entrez vos informations : </h1>
+<form action="/BDD" method="post">
   <div>
     <label for="nom">Nom :</label>
     <input type="text" id="nom" name="nom" />
   </div>
   <div>
-    <label for="courriel">Courriel :</label>
-    <input type="email" id="courriel" name="courriel" />
-  </div>
-  <div>
-    <label for="message">Message :</label>
-    <textarea id="message" name="message" ></textarea>
+    <label for="age">Age :</label>
+    <input type="text" id="age" name="age" />
   </div>
   <div>
     <input type="submit" name="submit" value="Envoyer" />

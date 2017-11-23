@@ -5,13 +5,13 @@
          version="3.1">
 
     <servlet>
-        <servlet-name>helloWorld</servlet-name>
-        <servlet-class>helloWorld</servlet-class>
+        <servlet-name>BDD</servlet-name>
+        <servlet-class>BDD</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>helloWorld</servlet-name>
-        <url-pattern>/helloWorld</url-pattern>
+        <servlet-name>BDD</servlet-name>
+        <url-pattern>/BDD</url-pattern>
     </servlet-mapping>
 
 </web-app>

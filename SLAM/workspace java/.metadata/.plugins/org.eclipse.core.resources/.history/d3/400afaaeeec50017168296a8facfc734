@@ -1,0 +1,18 @@
+package JDBC;
+
+import com.mysql.jdbc;
+
+public class JDBC {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	public static void insererEnBdd(){
+		String url="";
+		String login="root";
+		String passwd="";
+		Connection cn=null;
+		Statement st=null;
+	}
+}
