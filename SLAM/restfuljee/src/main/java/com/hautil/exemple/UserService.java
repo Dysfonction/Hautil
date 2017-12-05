@@ -9,16 +9,19 @@ import java.util.ArrayList;
 public class UserService {
     ArrayList<User> users = new ArrayList<User>();
 
-    public UserService(){
+    public UserService() {
         users.add(new User("ZA", 30));
         users.add(new User("FLM", 35));
         users.add(new User("LF", 20));
     }
-    @GET
+    @POST
     @Produces(MediaType.APPLICATION_JSON)
-    public String getUsers() {
-        //Serialiser d'objets en JSON
+    public String addUser(@FormParam("nom") String nom, @FormParam("age") int age) {
+        User res=null;
         ObjectMapper mapper = new ObjectMapper();
+
+        User u = new User(nom, age);
+        users.add(u);
         String jsonInString = null;
         try {
             jsonInString = mapper.writeValueAsString(users);
@@ -26,6 +29,5 @@ public class UserService {
             return e.getMessage();
         }
         return jsonInString;
-    }
     }
 }
